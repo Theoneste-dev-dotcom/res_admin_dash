@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+h1,
+h2 {
+  color: #444;
+}
+img{
+  width: 3vw;
+  min-width: 30px;
+}
+
+.side-menu {
+  position: fixed;
+  background-color: hotpink;
+  width: 20vw;
+  min-height:120vh;
+  display: flex;
+  flex-direction: column;
+}
+.side-menu .brand-name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-menu ul li {
+  font-size: 24px;
+  padding: 10px 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.side-menu li img {
+  width: 3vw;
+  min-width: 30px;
+}
+.side-menu li:hover {
+  background-color: white;
+  color: black;
+}
+.container {
+  position: absolute;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+}
+.container .header {
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  right: 0;
+  width: 79vw;
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2);
+}
+.container .header .nav {
+  width: 100%;
+  padding: 7px;
+  display: flex;
+
+  align-items: center;
+}
+.container .header .nav .search {
+  flex: 3;
+  display: flex;
+
+  background-color: rgb(70, 79, 70);
+}
+.container .header .nav .search img {
+  width: 40px;
+  height: 40px;
+}
+.container .header .nav .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+}
+.container .header .nav .user img {
+  width: 40px;
+  height: 40px;
+}
+.btn {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  background: hotpink;
+  padding: 3px 8px;
+  color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.btn:hover{
+  background-color: white;
+  color:hotpink;
+  border: 2px solid  hotpink;
+  padding: 5px 10px;
+}
+.title{
+  padding: 5px 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #999;
+}
+table{
+  padding: 8px;
+}
+tr{
+  display: flex;
+  justify-content: space-between;
+}
+td, th{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  text-align: left;
+  justify-content: space-around;
+}
+h3{
+  color: #999;
+}
+.container .header .nav{
+  display: flex;
+  justify-content: space-between;
+  gap:4px;
+}
+.container .header .nav .user{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  
+}
+.container .header .nav .user .img-case {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.container .header .nav .user .img-case img {
+  right: 0;
+}
+.container .header .nav .search input[type="text"] {
+  border: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  width: 100%;
+}
+.container .content {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container .content .cards {
+  padding: 2px 5px;
+  margin: 0px 15px 40px 15px;
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+.container .content .card .icon-case img{
+width:100px;
+height:100px;
+}
+.container .content .card{
+    display: flex;
+    width: 250px;
+    height: 150px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 4px 8px 0 rgb(0, 0, 0, 0.2);
+}
+.container .content-2{
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+}
+.container .content-2 .recent-payments{
+    min-height: 50vh;
+    flex:5;
+    background-color: white;
+    margin:0px 25px 25px 25px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 4px;
+
+}
+ .content-2 .new-student{
+  min-height: 50vh;
+  flex:2;
+  background-color: white;
+  margin:0px 25px 25px 25px;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4px;
+}
+
+table{
+    padding: 10px;
+}
+th, td{
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 550px){
+  .container .content .cards .card{
+    margin-left: 40px;
+  }
+}
+/* For devices with a max-width of 400px */
+@media screen and (max-width: 400px) {
+ 
+  .hide{
+    display: none;
+  }
+  .side-menu {
+    height: 100vh;
+    width: auto;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+  }
+  .container{
+    width: 90vw;
+  }
+  .side-menu ul li span {
+    display: none;
+  }
+
+  .container .header {
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 80px;
+    height: 30px;
+  }
+  .container .content .card {
+    width: 100%;
+    height: auto;
+  }
+  .container .content .cards{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container .content .cards .card{
+    width: 200px;
+  }
+  .container .content-2{
+
+    width: 100%;
+    padding: none;
+    margin:  0 0 0 0;
+  }
+  .container .content-2 .recent-payments,
+  .container .content-2 .new-student {
+    width: 100%;
+    margin: none;
+    font-size: 12px;
+  }
+  table{
+    width: 100%;
+  }
+}
+
+/* For devices with a max-width of 600px */
+@media screen and (max-width: 600px) {
+  .hide{
+    display: none;
+  }
+.side-menu{
+  width: 5vw;
+  padding: none;
+  margin: none;
+}
+  .side-menu ul li span {
+    display: none;
+  }
+  .container {
+   width: 70vw;
+  }
+  .container .header {
+  
+  }
+  .btn {
+    width: 80px;
+    height: 30px;
+  }
+  .container .content .card {
+    width: 48%;
+    height: auto;
+  }
+  .container .content .cards{
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .container .content-2 .recent-payments,
+  .container .content-2 .new-student {
+  
+    margin: none;
+    font-size: 12px;
+  }
+}
+
+/* For devices with a max-width of 800px */
+@media screen and (max-width: 800px) {
+  .side-menu {
+    width: 40vw;
+  }
+  .container {
+    width: 60vw;
+  }
+  .container .header {
+    width: 59vw;
+  }
+  .btn {
+    width: 80px;
+    height: 30px;
+  }
+  .container .content .card {
+    width: 48%;
+    height: auto;
+  }
+
+  .container .content-2 .recent-payments,
+  .container .content-2 .new-student {
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
+/* For devices with a max-width of 1000px */
+@media screen and (max-width: 1000px) {
+
+  .side-menu {
+    width: 30vw;
+  }
+
+  .container {
+    width: 70vw;
+  }
+  .container .header {
+    width: 69vw;
+  }
+  .btn {
+    width: 80px;
+    height: 30px;
+  }
+  .container .content .card {
+    width: 48%;
+    height: auto;
+  }
+  .container .content-2{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 12px;
+    margin: none;
+    width: 79%;
+    padding: none;
+    flex-direction: column;
+  }
+  .container .content-2 .recent-payments,
+  .container .content-2 .new-student {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+  }
+}
+
+/* For devices with a min-width of 1200px */
+@media screen and (min-width: 1200px) {
+  .side-menu {
+    width: 20vw;
+  }
+  .container {
+    width: 80vw;
+  }
+  .container .header {
+    width: 79vw;
+  }
+  .btn {
+    width: 100px;
+    height: 40px;
+  }
+  .container .content .card {
+    width: 23%;
+    height: auto;
+  }
+  .container .content-2 .recent-payments,
+  .container .content-2 .new-student {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+/* For devices with a min-width of 1400px */
+@media screen and (min-width: 1400px) {
+  .side-menu {
+    width: 15vw;
+  }
+  .container {
+    width: 85vw;
+  }
+  .container .header {
+    width: 84vw;
+  }
+  .btn {
+    width: 100px;
+    height: 40px;
+  }
+  .container .content .card {
+    width: 18%;
+    height: auto;
+  }
+  .container .content-2 .recent-payments,
+  .container .content-2 .new-student {
+    width: 100%;
+    font-size: 20px;
+  }
+}
